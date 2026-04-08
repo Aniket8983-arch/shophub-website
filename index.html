@@ -1,0 +1,197 @@
+
+
+Skip to content
+Using Gmail with screen readers
+Enable desktop notifications for Gmail.
+   OK  No, thanks
+Conversations
+0% of 5,120 GB used
+Terms · Privacy · Programme Policies
+Last account activity: 1 minute ago
+Open in 1 other location · Details
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub | Top Online Clothing Brand in India</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Shop<span>Hub</span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#men">Men</a></li>
+            <li><a href="#women">Women</a></li>
+            <li><a href="#kids">Kids</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="search-box">
+                <input type="text" placeholder="Search clothes...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <div class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <p class="empty-cart-msg">Your cart is empty.</p>
+            </div>
+            <div class="cart-total">
+                <strong>Total: $<span id="total-price">0.00</span></strong>
+            </div>
+            <button class="btn checkout-btn" onclick="alert('Checkout functionality coming soon!')">Checkout</button>
+        </div>
+    </div>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h4>India's Leading Clothing Store</h4>
+            <h1>The Ultimate <br><span>Fashion Collection</span></h1>
+            <p>Skip searching for "clothing stores near me". Shop the best clothes online right here.</p>
+            <a href="#men" class="btn">Shop Now</a>
+        </div>
+    </header>
+
+    <section id="men" class="products">
+        <h2 class="section-title">Men's Apparel</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80" alt="White Tee">
+                <div class="details">
+                    <span>Men's Basics</span>
+                    <h5>Classic White T-Shirt</h5>
+                    <div class="price">$20.00</div>
+                </div>
+                <button class="add-cart" onclick="addToCart('Classic White T-Shirt', 20.00)"><i class="fas fa-cart-plus"></i></button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=500&q=80" alt="Jeans">
+                <div class="details">
+                    <span>Casual</span>
+                    <h5>Slim Fit Blue Jeans</h5>
+                    <div class="price">$50.00</div>
+                </div>
+                <button class="add-cart" onclick="addToCart('Slim Fit Blue Jeans', 50.00)"><i class="fas fa-cart-plus"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="women" class="products bg-light">
+        <h2 class="section-title">Women's Clothing & Activewear</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=80" alt="Summer Dress">
+                <div class="details">
+                    <span>Dresses</span>
+                    <h5>Yellow Summer Dress</h5>
+                    <div class="price">$45.00</div>
+                </div>
+                <button class="add-cart" onclick="addToCart('Yellow Summer Dress', 45.00)"><i class="fas fa-cart-plus"></i></button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=500&q=80" alt="Gym Clothes">
+                <div class="details">
+                    <span>Activewear</span>
+                    <h5>Gym Clothes for Women</h5>
+                    <div class="price">$55.00</div>
+                </div>
+                <button class="add-cart" onclick="addToCart('Gym Clothes for Women', 55.00)"><i class="fas fa-cart-plus"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="kids" class="products">
+        <h2 class="section-title">Kids & Baby</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1519275573815-814a036e5203?auto=format&fit=crop&w=500&q=80" alt="Kids Clothes">
+                <div class="details">
+                    <span>Thespark Shop</span>
+                    <h5>Kids Clothes for Baby Boy & Girl</h5>
+                    <div class="price">$30.00</div>
+                </div>
+                <button class="add-cart" onclick="addToCart('Kids Clothes', 30.00)"><i class="fas fa-cart-plus"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>About ShopHub</h2>
+            <p>Welcome to ShopHub, the fastest-growing <strong>online</strong> fashion <strong>brand</strong> in <strong>India</strong>. If you're tired of searching for "<strong>clothing stores near me</strong>", you've arrived at the perfect destination. We operate a premium digital <strong>store</strong> offering high-quality <strong>clothes</strong> for everyone.</p>
+            <p>From the latest <strong>men</strong> and <strong>women</strong>'s apparel to premium <strong>gym clothes for women</strong> and adorable <strong>thespark shop kids clothes for baby boy & girl</strong>, we bring top-tier fashion directly to your door.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ShopHub Fashion Store | Top Clothing Brand Online. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+
+        // Cart Logic
+        let cart = [];
+
+        function addToCart(itemName, itemPrice) {
+            cart.push({ name: itemName, price: itemPrice });
+            updateCartUI();
+            alert(itemName + " added to cart!");
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove 1 item at the specific index
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            let total = 0;
+            document.getElementById('cart-count').innerText = cart.length;
+            const cartItemsContainer = document.getElementById('cart-items');
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart-msg">Your cart is empty.</p>';
+            } else {
+                cartItemsContainer.innerHTML = ''; 
+                cart.forEach((item, index) => {
+                    total += item.price;
+                    cartItemsContainer.innerHTML += `
+                        <div class="cart-item-row">
+                            <span class="item-name">${item.name}</span>
+                            <span class="item-price">$${item.price.toFixed(2)}</span>
+                            <button class="remove-btn" onclick="removeFromCart(${index})"><i class="fas fa-trash"></i></button>
+                        </div>
+                    `;
+                });
+            }
+            document.getElementById('total-price').innerText = total.toFixed(2);
+        }
+
+        function toggleCart() {
+            document.getElementById('cart-modal').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+index.html
+Displaying index.html.
